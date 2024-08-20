@@ -20,7 +20,7 @@ Este é um projeto simples de Lista Telefônica que implementa as funcionalidade
 1. Clone o repositório para o seu ambiente local:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/GabrielPyrrho/Lista-Telefonica.git
    ```
 
 2. Navegue até o diretório do projeto:
