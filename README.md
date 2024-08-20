@@ -1,4 +1,3 @@
-```markdown
 # Lista Telefônica - CRUD
 
 Este é um projeto simples de Lista Telefônica que implementa as funcionalidades básicas de um CRUD (Create, Read, Update, Delete) usando um servidor JSON.
