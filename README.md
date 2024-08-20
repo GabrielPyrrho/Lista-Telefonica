@@ -25,7 +25,7 @@ Este é um projeto simples de Lista Telefônica que implementa as funcionalidade
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd nome-do-diretorio
+   cd Lista-Telefonica
    ```
 
 3. Instale as dependências necessárias (se houver):
