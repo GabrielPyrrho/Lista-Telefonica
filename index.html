@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista telefônica</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="container">
+ 
+  <h1><img src="hospital-logo.png" width="250px" alt="Logo do Hospital"> Lista Telefônica - Hospital Especial</h1>
+  
+  <hr>
+
+  <!-- Button trigger modal -->
+
+  <div class="row">
+    <div class="col">
+      <input onkeyup="filtrar()" type="text" class="form-control" placeholder="Buscar" id="input_busca">
+    </div>
+
+    <div class="col lg-12">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Novo Contato
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Ramal</th>
+          <th>Setor</th>
+        </tr>
+      </thead>
+      <tbody id="tabela_contatos"></tbody>
+    </table>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Novo Contato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form onsubmit="inserir()" id="form_add">
+            <div class="modal-body">
+              <input class="form-control form-control-lg mb-3" id="input_contato" placeholder="Nome do contato">
+
+              <input class="form-control form-control-lg mb-3" id="input_numero" type="text" placeholder="Setor">
+
+              <input class="form-control form-control-lg mb-3" id="input_cidade" type="text" placeholder="Ramal">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Adicionar</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEditar" aria-labelledby="offcanvasExampleLabel">
+
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Editar contato</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <form id="form_editar_contato" onsubmit="editar()">
+        <input type="hidden" id="input_editar_id">
+        <label for="input_editar_contato">Nome</label>
+        <input type="text" id="input_editar_contato" class="form-control mb-3">
+
+        <label for="input_editar_numero">Ramal</label>
+        <input type="text" id="input_editar_numero" class="form-control mb-3">
+
+        <label for="input_editar_city">Setor</label>
+        <input type="text" id="input_editar_city" class="form-control mb-3">
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  <script src="eventos.js"></script>
+  <script src="filtrar.js"></script>
+
+  <P class="card-text py-2">2024 © <i class="bi bi-c-circle"></i> Desenvolvido por Gabriel Pyrrho | Projeto
+    sem fins
+    comerciais.</P>
+
+  
+</body>
+
+</html>
+
+  <style>
+body {
+    background: url('hospital-fundo.jpg') no-repeat center center fixed;
+    background-size: 100%; /* Reduz o tamanho da imagem */
+    background-position: center 100%; /* Ajusta a posição da imagem */
+    font-family: Arial, sans-serif;
+    color: #b4a3a3;
+}
+
+
+  
